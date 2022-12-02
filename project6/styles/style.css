@@ -1,0 +1,16 @@
+main {
+    width: 600px;
+}
+
+.skill-scale {
+    height: 4px;
+    background-color: #C4C4C4;
+    border-radius: 8px;
+}
+
+.skill-scale-internal {
+    width: 80%;
+    height: 4px;
+    border-radius: 8px;
+    background-color: #34547A;
+}

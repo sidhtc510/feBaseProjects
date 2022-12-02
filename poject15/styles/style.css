@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 140px 0;
+}
+
+.form-wrapper {
+    width: 70%;
+    background: #34495e;
+    margin: auto;
+    padding: 80px 150px;
+    border-radius: 20px;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px 35px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+input::placeholder {
+    color: rgb(72, 72, 72);
+}
+
+input[type="number"] {
+    margin: 35px 0 120px 0;
+}
+
+input[type="number"],
+input[type="text"] {
+    background: #d9d9d9;
+
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background: #27ae60;
+    color: white;
+}
+
+
+.products-wrapper {
+    margin: 70px auto 0;
+    width: 70%;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+    background: #34495e;
+    color: #d9d9d9;
+    border-radius: 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+.product:not(:last-child) {
+    margin: 0 0 30px 0;
+}
+
+.delete-btn {
+    display: none;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    text-align: center;
+    outline: 3px solid black;
+    background: red;
+    color: rgb(0, 0, 0);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+}

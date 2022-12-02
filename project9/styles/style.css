@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+}
+.i1{
+    background-color: rgb(125, 190, 21);
+}
+.i2{
+    background-color: rgb(50, 99, 223);
+}
+.i3{
+    background-color: rgb(13, 103, 73);
+}
+.i4{
+    background-color: aqua;
+}
