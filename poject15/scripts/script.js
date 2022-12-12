@@ -127,7 +127,8 @@ productsSearch.addEventListener('input', function (e) {
     // console.log(foundProducts);
     productsWrapper.innerHTML = ``;
     renderProducts(foundProducts);
-
+    onHover()
+    deleteProduct()
 })
 
 function searchProducts(value) {
