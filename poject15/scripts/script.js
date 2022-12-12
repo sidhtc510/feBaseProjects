@@ -2,6 +2,10 @@ let form = document.querySelector(".product-form")
 let productName = document.querySelector("input[name='product-name']")
 let productPrice = document.querySelector("input[name='product-price']")
 let productsWrapper = document.querySelector(".products-wrapper")
+let productsSearch = document.querySelector("input[name='products-search']")
+let notification = document.querySelector(".notification")
+let notificationText = document.querySelector(".notification-text")
+console.log(notificationText.innerText);
 
 
 let products = [ // коллекция данных
@@ -49,7 +53,7 @@ function renderProducts(arr) {
             </div>
             `
     });
-    console.log(products);
+    // console.log(products);
     // onHover()
     // deleteProduct()
 
@@ -74,12 +78,9 @@ function deleteProduct() {
     deleteBtns.forEach(function (btn) {
         btn.addEventListener("click", function () {
             btn.parentElement.remove()
-            deleteElem(btn.parentElement.getAttribute("id"))
-
-            // products.splice(btn.getAttribute("id"))
-
-            // console.log();
-            console.log(products);
+            deleteElem(btn.parentElement.getAttribute("id"));
+            let notificationText = "item removed";
+            showNotification(notificationText, "red");
         })
     })
 }
@@ -95,6 +96,8 @@ form.addEventListener("submit", function (event) { // параметром пе�
         price: Number(productPrice.value),
         id: Date.now(),
     }
+    let notificationText = "item added";
+    showNotification(notificationText);
     products.unshift(newProduct) // это тот же push, но в начало массива
     productsWrapper.innerHTML = "" // предварительно очищаем html класс productWrapper
     renderProducts(products) // рендерим все с учетом добавленного объекта
@@ -104,19 +107,49 @@ form.addEventListener("submit", function (event) { // параметром пе�
     deleteProduct()
 })
 
-function deleteElem(id){
-    products.forEach(function(el, i){
+function deleteElem(id) {
+    products.forEach(function (el, i) {
         if (el.id == id) {
-            products.splice(i,1)            
+            products.splice(i, 1)
         }
     })
 }
 
 
+
+
+productsSearch.addEventListener('input', function (e) {
+
+    let searchQuery = String(e.target.value);
+
+    let foundProducts = searchProducts(searchQuery);
+
+    // console.log(foundProducts);
+    productsWrapper.innerHTML = ``;
+    renderProducts(foundProducts);
+
+})
+
+function searchProducts(value) {
+    return products.filter(function (product) {
+        return product.name.toLowerCase().includes(value);
+    })
+}
+
+function showNotification(txt, color = "#27ae60") {
+    notificationText.innerText = txt;
+    notification.style.display = "block";
+    notification.style.background = color;
+
+    setTimeout(function () {
+        notification.style.display = "none";
+    }, 3000)
+}
+
+
 renderProducts(products)
 onHover()
-deleteProduct() 
-
+deleteProduct()
 // console.log(products.at(-1));
 // let qq = [10,20,30,40,50]
 // qq.length = 2
