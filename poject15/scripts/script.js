@@ -5,7 +5,6 @@ let productsWrapper = document.querySelector(".products-wrapper")
 let productsSearch = document.querySelector("input[name='products-search']")
 let notification = document.querySelector(".notification")
 let notificationText = document.querySelector(".notification-text")
-console.log(notificationText.innerText);
 
 
 let products = [ // коллекция данных
@@ -79,8 +78,7 @@ function deleteProduct() {
         btn.addEventListener("click", function () {
             btn.parentElement.remove()
             deleteElem(btn.parentElement.getAttribute("id"));
-            let notificationText = "item removed";
-            showNotification(notificationText, "red");
+            showNotification("item removed", "#ae2727");
         })
     })
 }
