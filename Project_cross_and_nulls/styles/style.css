@@ -1,0 +1,46 @@
+body {
+    font-family: Nunito, sans-serif;
+    /* font-family: Roboto, sans-serif; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 239, 239);
+}
+
+.board {
+    width: 320px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+    background-image: url(../images/grid.png);
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 5px rgba(50, 50, 50, 0.5);
+}
+
+.board:hover {
+   
+}
+
+.cell:hover{
+   cursor: pointer;
+}
+
+.circle {
+    background-image: url(../images/null.png);
+}
+
+.cross {
+    background-image: url(../images/cross.png);
+}
+
+.circle,
+.cross {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
