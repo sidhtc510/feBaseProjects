@@ -123,9 +123,9 @@ arr.forEach(element => {
     `
 })
 
-let colorDiv = document.querySelectorAll(".card")
+let colorDiv = document.querySelectorAll(".card");
 colorDiv.forEach(element => {
     element.addEventListener("click", function(){
-        element.classList.toggle("activeBG")
-    })
+        element.classList.toggle("activeBG");
+    });
 });

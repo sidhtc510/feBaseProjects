@@ -6,7 +6,7 @@
 // item.innerHTML += "<h2>hello</h2>"
 
 
-let main = document.querySelector("main")
+let main = document.querySelector("main");
 
 // let myname = "Tolik"
 
@@ -146,4 +146,4 @@ cars.forEach(function (car) {
             <p>Год выпуска: ${car.year}</p>
             <p>Цена:  ${car.price}</p>
          </div>
-`})
+`});

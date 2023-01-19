@@ -88,5 +88,5 @@ let pz = document.querySelectorAll("p.zzz")
 console.log(pz);
 
 for (let i = 0; i < pz.length; i++) {
-    pz[i].innerText = i
+    pz[i].innerText = i;
 }

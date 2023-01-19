@@ -10,6 +10,8 @@ let gameOver = false;
 
 const cellElements = document.querySelectorAll(".cell");
 const result = document.querySelector("#result");
+const restartGame = document.getElementById("restartGame");
+
 
 cellElements.forEach((cell, index) => {
     cell.addEventListener("click", () => {
@@ -77,13 +79,27 @@ function checkResult() {
 function endGame(winner) {
     gameOver = true;
     if (winner == 0) {
+        result.style.display = ("block");
         result.innerText = "tie - i`ts when nobody wins";
+        restartGame.style.display = ("block");
+
+        setTimeout(function () {
+            result.style.display = ("none");
+            result.innerText = "";
+        }, 3000);
     } else {
+        result.style.display = ("block");
         result.innerText = `player ${winner} wins!`;
+        restartGame.style.display = ("block");
+
+        setTimeout(function () {
+            result.style.display = ("none");
+            result.innerText = "";
+        }, 3000);
     }
 }
 
-const restartGame = document.getElementById("restartGame");
+
 restartGame.addEventListener("click", () => {
     boardData = [
         [0, 0, 0],
@@ -98,4 +114,10 @@ restartGame.addEventListener("click", () => {
         cell.classList.remove("cross", "circle");
     });
     result.innerText = "";
+    result.style.display = ("none");
+    restartGame.style.display = ("none");
 });
+
+// setTimeout(function () {
+//     main.classList.add("active")
+// }, 3000)
