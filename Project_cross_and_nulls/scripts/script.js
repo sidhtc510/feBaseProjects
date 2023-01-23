@@ -4,13 +4,25 @@ let boardData = [
     [0, 0, 0],
 ];
 
+let score = [0, 0, 0];
+
+
+
+
 let player = 1;
 let gameOver = false;
 
 
 const cellElements = document.querySelectorAll(".cell");
 const result = document.querySelector("#result");
+const body = document.querySelector("body");
 const restartGame = document.getElementById("restartGame");
+const cross_score = document.getElementById("cross_scrore");
+const tie_scrore = document.getElementById("tie_scrore");
+const null_scrore = document.getElementById("null_scrore");
+
+console.log(body);
+
 
 
 cellElements.forEach((cell, index) => {
@@ -79,23 +91,20 @@ function checkResult() {
 function endGame(winner) {
     gameOver = true;
     if (winner == 0) {
-        result.style.display = ("block");
         result.innerText = "tie - i`ts when nobody wins";
-        restartGame.style.display = ("block");
-
-        setTimeout(function () {
-            result.style.display = ("none");
-            result.innerText = "";
-        }, 3000);
+        score[1]++;
+        tie_scrore.innerText = score[1];
+        showResult();
     } else {
-        result.style.display = ("block");
         result.innerText = `player ${winner} wins!`;
-        restartGame.style.display = ("block");
-
-        setTimeout(function () {
-            result.style.display = ("none");
-            result.innerText = "";
-        }, 3000);
+        if (winner == 1) {
+            score[0]++;
+            cross_score.innerText = score[0];
+        }else if(winner == 2){
+            score[2]++;
+            null_scrore.innerText = score[2];
+        }
+        showResult();
     }
 }
 
@@ -118,6 +127,16 @@ restartGame.addEventListener("click", () => {
     restartGame.style.display = ("none");
 });
 
-// setTimeout(function () {
-//     main.classList.add("active")
-// }, 3000)
+function showResult() {
+    result.style.display = ("block");
+    restartGame.style.display = ("block");
+    setTimeout(function () {
+        result.style.display = ("none");
+        result.innerText = "";
+    }, 3000);
+}
+
+let btn = document.querySelector(".btn");
+btn.addEventListener("click", function () {
+    body.classList.toggle("dark_mode");
+});
