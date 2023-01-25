@@ -5,10 +5,6 @@ let boardData = [
 ];
 
 let score = [0, 0, 0];
-
-
-
-
 let player = 1;
 let gameOver = false;
 
@@ -20,10 +16,7 @@ const restartGame = document.getElementById("restartGame");
 const cross_score = document.getElementById("cross_scrore");
 const tie_scrore = document.getElementById("tie_scrore");
 const null_scrore = document.getElementById("null_scrore");
-
-console.log(body);
-
-
+const btn = document.querySelector(".btn");
 
 cellElements.forEach((cell, index) => {
     cell.addEventListener("click", () => {
@@ -45,6 +38,7 @@ function placeMarker(index) {
     }
 }
 
+
 function drawMarkers() {
     for (let row = 0; row < 3; row++) {
         for (let col = 0; col < 3; col++) {
@@ -56,6 +50,7 @@ function drawMarkers() {
         }
     }
 }
+
 
 function checkResult() {
     for (let i = 0; i < 3; i++) {
@@ -69,6 +64,7 @@ function checkResult() {
             return;
         }
     }
+
 
     let diagonalSum1 = boardData[0][0] + boardData[1][1] + boardData[2][2];
     let diagonalSum2 = boardData[0][2] + boardData[1][1] + boardData[2][0];
@@ -87,6 +83,7 @@ function checkResult() {
         return;
     }
 }
+
 
 function endGame(winner) {
     gameOver = true;
@@ -136,7 +133,7 @@ function showResult() {
     }, 3000);
 }
 
-let btn = document.querySelector(".btn");
+
 btn.addEventListener("click", function () {
     body.classList.toggle("dark_mode");
 });
