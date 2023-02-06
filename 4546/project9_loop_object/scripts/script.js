@@ -47,19 +47,19 @@
     3. kebab-case - product-name
 */
 
-    /* 
-        let name = prompt("Как вас зовут") // prompt всегда возвращает строку. 10 -> "10"
-        console.log(name)
-        name = 10
-        console.log(name)
-    */
+/* 
+    let name = prompt("Как вас зовут") // prompt всегда возвращает строку. 10 -> "10"
+    console.log(name)
+    name = 10
+    console.log(name)
+*/
 
-    /* Assignment to constant variable.
-        const myName = prompt("Как вас зовут")
-        console.log(myName)
-        myName = 10
-        console.log(myName)
-    */
+/* Assignment to constant variable.
+    const myName = prompt("Как вас зовут")
+    console.log(myName)
+    myName = 10
+    console.log(myName)
+*/
 
 
 /*  
@@ -260,7 +260,7 @@ console.log(str1.includes('a')) // false
 
 console.log(str1 > str2) // Посимвольное сравнение 
 console.log("Н" > "А") // true Н дальше по алфавиту
-*/ 
+*/
 
 // Есть переменная price. Если price > 1000, то в консоли выводим "скидка 10%"
 // если price > 1500, то в консоли выводим "скидка 15%"
@@ -285,7 +285,7 @@ const price = 1700
     } else {
         console.log("скидок нет")
     }
-*/ 
+*/
 
 /* Массивы и циклы 
     массив - это структура данных или коллекция элементов, которая упорядочена 
@@ -295,7 +295,7 @@ const price = 1700
     .pop() - метод, который позволяет удалить значение с конца массив
     .unshift() - метод, который добавляет в начало массив
     .shift() - метод, который удаляет значение с начала массива
-*/ 
+*/
 /*
 const arr = [] // пустой массив. длина пустого массива - 0, потому что в нем нет элементов
 const numbers = [1, 2, 3, 4, 5] // длина 5. индексы [0, 1, 2, 3, 4]
@@ -348,7 +348,7 @@ console.log(numbers.length)
     200 фильмов [{name : "Аватар",duration : "1h 23min", preview : "https://.img"}, {}]
  */
 
-    // Math.pow(10, 2) // 10^2 = 100
+// Math.pow(10, 2) // 10^2 = 100
 /* 
     const arr = [1, 4, 2, 6, 9]
     const squares = []
@@ -400,7 +400,7 @@ console.log(numbers.length)
     for(let i = 0; i <= 10; i++) {
         console.log(i)
     }
-*/ 
+*/
 // Задача. Попросить пользователя ввести число 3 раза
 /*
     for(let i = 0; i < 3; i++) {
@@ -557,17 +557,25 @@ const shoe = {
     id: 58404409,
     color: "Темно-синий",
     category: "Обувь",
-    additional : {
-        country : "Китай",
-        sex : "Мужской"
+    additional: {
+        country: "Китай",
+        sex: "Мужской"
     },
-    sizes : ["21", "22", "23", "24"]
+    sizes: ["21", "22", "23", "24"]
 }
-console.log(shoe.price) // 1504
-console.log(shoe["name"]) // "Сандалии"
-console.log(shoe)
+// console.log(shoe.price) // 1504
+// console.log(shoe["name"]) // "Сандалии"
+// console.log(shoe)
 
 /*
+  ДЗ. 
+    1. // Есть массив numbers. Нужно найти сумму нечетных элементов.
+        const numbers = [-100, 0, 43, -20, 150, 70, 15, 1.5]
+    2. Есть массив numbers. Нужно найти сумму четных и сумму нечетных элементов.
+        В консоли вывести разницу между ними (вычесть меньшее из большего)
+        const numbers = [-100, 0, 43, -20, 150, 70, 15, 1.5]
+
+
     ДЗ. 
     1. Создать объект, у которого будет название, цена и цвет. Вывести его в консоль
     2. Создать объект user, у которого будет email, password, login, age.
@@ -598,3 +606,88 @@ console.log(shoe)
 Сложные 
 3. object - объект, частным случаем которого является массив. 
 */
+
+// const numbers = [-100, 0, 43, -20, 150, 70, 15, 1.5];
+// let sumNegative = 0;
+// let sumPositive = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 2) {
+//         sumNegative += numbers[i];
+//     }else if(numbers[i]%2 === 0){
+//         sumPositive += numbers[i];
+//     }
+// }
+// if(sumPositive > sumNegative){
+//     console.log(sumPositive - sumNegative);
+// }else if(sumPositive < sumNegative){
+//     console.log(sumNegative - sumPositive);
+// }
+
+
+const good = {
+    name: "product",
+    price: 123,
+    color: "red"
+};
+// console.log(good);
+
+const currentYear = 2023;
+const user = {
+    email: "sidhtc510@gmail.com",
+    password: "pass",
+    login: "sidhtc510",
+    age: "38"
+};
+// console.log(currentYear - user.age);
+
+const prices = [
+    {
+        name: "Iphone 14",
+        price: 100000
+    },
+    {
+        name: "Iphone 13",
+        price: 80000
+    },
+    {
+        name: "Iphone 12",
+        price: 70000
+    }
+];
+let sum = 0;
+
+for (let i = 0; i < prices.length; i++) {
+    sum += prices[i].price;
+};
+// console.log(sum);
+
+function getTimesFromMinutes(minutes) {
+    if (typeof (minutes) !== 'number' || minutes > 600 || minutes < 0 || !Number.isInteger(minutes)) {
+        return "Ошибка, проверьте данные";
+    }
+    const h = Math.floor(minutes / 60);
+    const m = minutes % 60;
+
+    let hoursStr = '';
+
+    switch (h) {
+        case 0: 
+            hoursStr = 'часов';
+            break;
+        case 1:
+            hoursStr = 'час';
+            break;
+        case 2:
+        case 3:
+        case 4:
+            hoursStr = 'часа';
+            break;
+        default:
+            hoursStr = 'часов';
+    }
+
+    const str = `${h} ${hoursStr} ${m} минут`;
+    return str;
+}
+
+console.log(getTimesFromMinutes(120));

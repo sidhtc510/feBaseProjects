@@ -224,15 +224,16 @@ function name1() {
     console.log(move);
 }
 
-let w = 200
-function name2() {
-    w = w + 1
-    document.querySelector(".mousemove").style.width = w + "px"
-}
 document.querySelector(".mousemove").addEventListener("click", name1)
 // document.querySelector(".mousemove").onmousemove = name1 //same functional
 
-document.querySelector(".mousemove").addEventListener("mousemove", name2)
+
+let w = 200;
+function name2() {
+    w = w + 1;
+    document.querySelector(".mousemove").style.width = w + "px";
+}
+document.querySelector(".mousemove").addEventListener("mousemove", name2);
 
 
 

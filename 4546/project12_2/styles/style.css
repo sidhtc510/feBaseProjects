@@ -1,0 +1,39 @@
+body {
+    font-family: Nunito, sans-serif;
+    /* font-family: Roboto, sans-serif; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 1s;
+    background:rgb(88, 88, 88)
+}
+
+main{
+    width: 400px;
+}
+
+.btn{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    background-color: seagreen;
+    border-radius: 8px;
+    font-size: 22px;
+    cursor: pointer;
+    color: antiquewhite;
+}
+
+.btn:hover{
+
+    background-color: rgb(38,131,78);
+}
+
+.btn:active{
+    transform: scale(1.01);
+}
+
+.btn:not(:last-child){
+    margin-bottom: 15px;
+}

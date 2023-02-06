@@ -1,0 +1,66 @@
+body {
+  font-family: Nunito, sans-serif;
+  /* font-family: Roboto, sans-serif; */
+}
+
+.active {
+  opacity: 1 !important;
+  pointer-events: fill !important;
+}
+
+.modalWrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    transition: 0.2s;
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    pointer-events: none;
+}
+
+.modalWindow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 5% auto;
+    width: 700px;
+    height: 400px;
+    background-color: rgb(255, 255, 107);
+    border-radius: 8px;
+    border: 1px solid gray;
+    text-align: center;
+    box-shadow: 0 0 20px 5px rgb(0 0 0 / 60%);
+}
+.mainContentWrhapper {
+}
+
+.showModal{
+    cursor: pointer;
+}
+
+.closeModal{
+    cursor: pointer;
+    float: right;
+    border: none;
+    background: none;
+    color: #5e5e5e;
+    padding: 0 10px;
+}
+.closeModal:after{
+    display: inline-block;
+    content: "\00d7"; /* This will render the 'X' */
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .closeModal:hover{
+    background: #dddddd87;
+    transition: 300ms;
+    border-radius: 8px;
+}
+  
+
+  .modalTItle{
+    margin: 15px;
+  }

@@ -1,0 +1,62 @@
+body {
+    font-family: Nunito, sans-serif;
+    /* font-family: Roboto, sans-serif; */
+}
+
+.wrapper {
+    position: relative;
+    width: fit-content;
+    
+}
+
+img {
+    display: block;
+}
+
+.img_planet {
+    position: absolute;
+}
+
+.img_p1 {
+    top: 25px;
+    left: 216px;
+}
+
+.img_p2 {
+    top: 79px;
+    left: 91px;
+}
+
+.img_p3 {
+    top: 150px;
+    left: 178px;
+    width: 229px;
+    z-index: 20;
+}
+
+.img_asteroid {
+    top: 80px;
+    right: 105px;
+}
+
+.img_spaceship {
+    top: 0;
+}
+
+.img_ufo {
+    bottom: 35px;
+    left: 163px;
+    z-index: 30;
+}
+
+.img_superman {
+    bottom: 0;
+    right: 30px;
+}
+
+.img_alien{
+    width: 230px;
+    top: 21px;
+    right: 71px;
+    rotate: 36deg;
+}

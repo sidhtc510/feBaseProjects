@@ -1,0 +1,40 @@
+body {
+  font-family: Nunito, sans-serif;
+  /* font-family: Roboto, sans-serif; */
+}
+
+.goods {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+.goods__item {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 200px;
+  margin: 20px;
+  cursor: pointer;
+}
+.goods__item img {
+  border-radius: 7px;
+}
+.goods__title {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+.goods__category {
+  font-size: 14px;
+  font-weight: 200;
+  margin-left: 10px;
+}
+.goods__category span {
+  color: rgb(89, 0, 255);
+}
+.goods__price {
+  font-size: 18px;
+  text-align: right;
+  margin: 10px;
+}/*# sourceMappingURL=style.css.map */

@@ -125,7 +125,7 @@ restartGame.addEventListener("click", () => {
 });
 
 function showResult() {
-    result.style.display = ("block");
+    result.style.display = ("flex");
     restartGame.style.display = ("block");
     setTimeout(function () {
         result.style.display = ("none");

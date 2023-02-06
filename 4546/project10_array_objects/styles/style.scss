@@ -1,0 +1,46 @@
+body {
+    font-family: Nunito, sans-serif;
+    /* font-family: Roboto, sans-serif; */
+}
+
+.goods {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+
+    &__item {
+        border: 1px solid black;
+        border-radius: 8px;
+        width: 200px;
+        margin: 20px;
+        cursor: pointer;
+
+        img {
+            border-radius: 7px;
+        }
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__category {
+        font-size: 14px;
+        font-weight: 200;
+        margin-left: 10px;
+
+        span {
+            color: rgb(89, 0, 255);
+        }
+    }
+
+    &__price {
+        font-size: 18px;
+        text-align: right;
+        margin: 10px;
+    }
+}
