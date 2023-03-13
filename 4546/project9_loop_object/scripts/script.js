@@ -562,10 +562,13 @@ const shoe = {
         sex: "Мужской"
     },
     sizes: ["21", "22", "23", "24"]
-}
+};
 // console.log(shoe.price) // 1504
 // console.log(shoe["name"]) // "Сандалии"
 // console.log(shoe)
+
+console.log(Object.keys(shoe));
+console.log(Object.keys(shoe).length);
 
 /*
   ДЗ. 
